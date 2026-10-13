@@ -111,6 +111,41 @@ nav a:hover {
     color: var(--cor-texto-sobre-vermelho);
 }
 
+.procura {
+    padding: 50px 0;
+}
+
+.procura-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.procura-card {
+    background: #ffff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border-top: 4px solid #c0392b;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.procura-card:hover {
+    transform: translatey(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.procura-card h2 {
+    font-size:: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.procura-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 .texto-destaque {
     text-align: center;
     font-family: var(--fonte-titulo);

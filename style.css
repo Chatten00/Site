@@ -137,7 +137,7 @@ nav a:hover {
 }
 
 .procura-card h2 {
-    font-size:: 1.2rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
@@ -152,6 +152,71 @@ nav a:hover {
     font-size: 1.8rem;
     font-style: italic;
     margin: 0;
+}
+
+.apontando {
+    padding: 60px 0;
+}
+
+.apontando-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.apontando-texto {
+    flex: 1;
+}
+
+.apontando-texto h2 [
+    font-size: 2rem;
+    margin-bottom: 15px;
+]
+
+.apontando-texto p {
+    line-height: 1.6;
+    margin-bottom: 15px;;
+}
+
+.apontando-texto ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.apontando-texto li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+}
+
+.apontando-texto li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #c0392b;
+}
+
+.apontando-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.apontando-imagem img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+}
+
+@media (max-width: 768px) {
+    .apontando-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apontando-texto li {
+        text-align: left;
+    }
 }
 
 .informacoes {

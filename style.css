@@ -1,13 +1,13 @@
 :root {
     --cor-fundo: #f0f2f5;
     --cor-texto: #172128;
-    --cor-destaque: #7a1020;
-    --cor-destaque-hover: #5c0c18;
+    --cor-destaque: #659a7b;
+    --cor-destaque-hover: #456954;
     --cor-card: #ffffff;
     --cor-rodape: #172128;
     --cor-texto-rodape: #ffffff;
     --cor-branca: #ffffff;
-    --cor-vermelho-escuro: #7a1020;
+    --cor-vermelho-escuro: #659a7b;
     --cor-texto-sobre-vermelho: #ffffff;
 
     --fonte-titulo: 'Georgia', serif;
@@ -127,7 +127,7 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
-    border-top: 4px solid #c0392b;
+    border-top: 4px solid #4b775d;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -169,10 +169,10 @@ nav a:hover {
     flex: 1;
 }
 
-.apontando-texto h2 [
+.apontando-texto h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-]
+}
 
 .apontando-texto p {
     line-height: 1.6;
@@ -194,7 +194,7 @@ nav a:hover {
     content: "✔";
     position: absolute;
     left: 0;
-    color: #c0392b;
+    color: #456954;
 }
 
 .apontando-imagem {
@@ -273,6 +273,21 @@ nav a:hover {
     background-color: var(--cor-card);
     border-radius: var(--raio);
     padding: var(--espaco);
+}
+
+.perfume {
+    text-align: center;
+    font-style: oblique;
+    min-height: auto;
+    min-width: auto;
+    background-color: var(--cor-card);
+    border-radius: var(--raio);
+    padding: var(--espaco);
+}
+
+.homem {
+    height: 100%;
+    max-width: 100%;
 }
 
 footer {

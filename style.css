@@ -18,13 +18,9 @@
     --largura-maxima: 1100px;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -46,6 +42,7 @@ img {
     border-radius: var(--raio);
 }
 
+/* ---------- Cabeçalho ---------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -71,10 +68,9 @@ nav a {
     color: var(--cor-texto);
 }
 
-nav a:hover {
-    color: var(--cor-destaque-hover);
-}
+nav a:hover { color: var(--cor-destaque-hover); }
 
+/* ---------- Base ---------- */
 .hero {
     text-align: center;
     padding: 80px var(--espaco);
@@ -102,18 +98,23 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.secao.branca {
-    background: var(--cor-branca);
-}
+.secao.branca { background: var(--cor-branca); }
 
 .secao.vermelha {
     background: var(--cor-vermelho-escuro);
     color: var(--cor-texto-sobre-vermelho);
 }
 
-.procura {
-    padding: 50px 0;
+.texto-destaque {
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    font-style: italic;
+    margin: 0;
 }
+
+/* ---------- Procura ---------- */
+.procura { padding: 50px 0; }
 
 .procura-cards {
     display: grid;
@@ -122,7 +123,7 @@ nav a:hover {
 }
 
 .procura-card {
-    background: #ffff;
+    background: #fff;
     padding: 25px 20px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -132,7 +133,7 @@ nav a:hover {
 }
 
 .procura-card:hover {
-    transform: translatey(-5px);
+    transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -146,17 +147,8 @@ nav a:hover {
     line-height: 1.5;
 }
 
-.texto-destaque {
-    text-align: center;
-    font-family: var(--fonte-titulo);
-    font-size: 1.8rem;
-    font-style: italic;
-    margin: 0;
-}
-
-.apontando {
-    padding: 60px 0;
-}
+/* ---------- Apontando ---------- */
+.apontando { padding: 60px 0; }
 
 .apontando-conteudo {
     display: flex;
@@ -165,9 +157,7 @@ nav a:hover {
     gap: 40px;
 }
 
-.apontando-texto {
-    flex: 1;
-}
+.apontando-texto { flex: 1; }
 
 .apontando-texto h2 {
     font-size: 2rem;
@@ -176,7 +166,7 @@ nav a:hover {
 
 .apontando-texto p {
     line-height: 1.6;
-    margin-bottom: 15px;;
+    margin-bottom: 15px;
 }
 
 .apontando-texto ul {
@@ -213,12 +203,10 @@ nav a:hover {
         flex-direction: column;
         text-align: center;
     }
-
-    .apontando-texto li {
-        text-align: left;
-    }
+    .apontando-texto li { text-align: left; }
 }
 
+/* ---------- Informações ---------- */
 .informacoes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -232,6 +220,264 @@ nav a:hover {
     text-align: center;
 }
 
+/* ---------- Vitrine ---------- */
+.vitrine {
+    background: #f2f2f2;
+    padding: 60px 0;
+}
+
+.vitrine-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.vitrine-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.vitrine-topo h2 {
+    flex: 1;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.vitrine-veja-mais {
+    color: #1e7a5a;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.vitrine-veja-mais:hover { text-decoration: underline; }
+
+.vitrine-grade {
+    display: flex;
+    gap: 8px;
+    min-height: 460px;
+}
+
+.vitrine-banner {
+    position: relative;
+    flex: 0 0 236px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #bfe3f0 0%, #f6b7a0 100%);
+}
+
+.vitrine-banner > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.banner-texto {
+    position: relative;
+    margin: 40px 16px 0;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: #b0405a;
+}
+
+.banner-selo {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    width: 150px;
+    padding: 6px 0 4px;
+    background: #d6192b;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-selo strong {
+    display: block;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.banner-selo small { font-size: 18px; }
+
+.banner-selo span {
+    display: block;
+    margin-top: 4px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.banner-botao {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    padding: 6px 16px;
+    background: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+}
+
+.vitrine-card {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+}
+
+.vitrine-card > img {
+    height: 130px;
+    margin: 16px auto 24px;
+    object-fit: contain;
+}
+
+.favorito {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #1e7a5a;
+    cursor: pointer;
+}
+
+.etiqueta {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 4px 8px;
+    background: #c8102e;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.marca {
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.nome {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.estrelas {
+    margin-top: 8px;
+    color: #f5a000;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.rodape-card {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.preco strong {
+    display: block;
+    font-size: 16px;
+    color: #222;
+}
+
+.preco span {
+    font-size: 15px;
+    color: #666;
+}
+
+.sacola {
+    width: 48px;
+    height: 48px;
+    background: #0b8a7a;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.sacola:hover { background: #086b5e; }
+
+.vitrine-controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.seta {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1.5px solid #3d7a5f;
+    border-radius: 50%;
+    color: #3d7a5f;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.indicadores {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.indicadores span {
+    width: 8px;
+    height: 8px;
+    background: #c4c4c4;
+    border-radius: 50%;
+}
+
+.indicadores span.ativo {
+    width: 24px;
+    background: #3d7a5f;
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    .vitrine-grade {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .vitrine-banner,
+    .vitrine-card {
+        flex: 0 0 45%;
+        scroll-snap-align: start;
+    }
+
+    .vitrine-topo h2 { font-size: 26px; }
+}
+
+/* ---------- Produtos ---------- */
 .grade-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -246,9 +492,7 @@ nav a:hover {
     text-align: center;
 }
 
-.card h3 {
-    margin: 16px 0 8px;
-}
+.card h3 { margin: 16px 0 8px; }
 
 .botao {
     display: inline-block;
@@ -259,10 +503,9 @@ nav a:hover {
     border-radius: 8px;
 }
 
-.botao:hover {
-    background-color: var(--cor-destaque-hover);
-}
+.botao:hover { background-color: var(--cor-destaque-hover); }
 
+/* ---------- Missão ---------- */
 .missao-visao {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -275,21 +518,60 @@ nav a:hover {
     padding: var(--espaco);
 }
 
-.perfume {
+/* ---------- Galeria de perfumes ---------- */
+.perfumes-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--espaco);
+    margin: 24px 0;
+}
+
+.perfumes-grade img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* ---------- Homem ---------- */
+.homem-secao {
+    padding: 60px 0;
+    background: var(--cor-branca);
+}
+
+.homem-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.homem-imagem {
+    flex: 1;
     text-align: center;
-    font-style: oblique;
-    min-height: auto;
-    min-width: auto;
-    background-color: var(--cor-card);
-    border-radius: var(--raio);
-    padding: var(--espaco);
 }
 
-.homem {
-    height: 100%;
+.homem-imagem img {
     max-width: 100%;
+    height: auto;
+    max-height: 450px;
 }
 
+.homem-texto {
+    flex: 1;
+    padding: 30px;
+}
+
+.homem-texto h2 { margin-bottom: 15px; }
+
+.homem-texto p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .homem-conteudo { flex-direction: column; }
+}
+
+/* ---------- Rodapé ---------- */
 footer {
     background: var(--cor-rodape);
     color: var(--cor-texto-rodape);

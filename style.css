@@ -520,16 +520,23 @@ nav a:hover { color: var(--cor-destaque-hover); }
 
 /* ---------- Galeria de perfumes ---------- */
 .perfumes-grade {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
     gap: var(--espaco);
     margin: 24px 0;
 }
 
 .perfumes-grade img {
-    width: 100%;
-    max-height: 300px;
+    width: 500px;
+    height: 400px;
+    max-height: auto;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.perfumes-grade img:hover {
+    transform: scale(1.05);
 }
 
 /* ---------- Homem ---------- */

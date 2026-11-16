@@ -6,10 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit("Método não permitido");
 }
 
-// Mantenha aqui o número verdadeiro já configurado.
+
 $numeroWhatsApp = "5511949446373";
 
-// Recebe os dados enviados pelo formulário.
+
 if (!isset($_POST["pedido"])) {
     exit("Pedido não recebido.");
 }
